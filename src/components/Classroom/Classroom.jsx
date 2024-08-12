@@ -61,7 +61,7 @@ const Classroom = () => {
       setLoading(true);
       axios
         .post(
-          "https://ocms-backend.vercel.app/classes/getClassroom",
+          "https://cms-backend-7brm.vercel.app/classes/getClassroom",
           {
             classCode: classCode,
           },
@@ -94,7 +94,7 @@ const Classroom = () => {
         setReminderLoading(true);
         axios
           .post(
-            "https://ocms-backend.vercel.app/classes/getReminders",
+            "https://cms-backend-7brm.vercel.app/classes/getReminders",
             {
               userEmail: storeData.userEmail,
             },
@@ -104,7 +104,7 @@ const Classroom = () => {
             let reminders = [];
             for (let reminder of res.data) {
               await axios
-                .post("https://ocms-backend.vercel.app/classes/getClassroom", {
+                .post("https://cms-backend-7brm.vercel.app/classes/getClassroom", {
                   classCode: reminder.classCode,
                 })
                 .then((classDetails) => {
@@ -132,7 +132,7 @@ const Classroom = () => {
   const deleteClass = () => {
     axios
       .delete(
-        "https://ocms-backend.vercel.app/classes/deleteClassroom",
+        "https://cms-backend-7brm.vercel.app/classes/deleteClassroom",
         {
           data: { classCode: classCode },
         },

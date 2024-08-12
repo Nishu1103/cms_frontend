@@ -22,7 +22,7 @@ const MobileReminder = () => {
         setReminderLoading(true);
         axios
           .post(
-            "https://ocms-backend.vercel.app/classes/getReminders",
+            "https://cms-backend-7brm.vercel.app/classes/getReminders",
             {
               userEmail: storeData.userEmail,
             },
@@ -32,7 +32,7 @@ const MobileReminder = () => {
             let reminders = [];
             for (let reminder of res.data) {
               await axios
-                .post("https://ocms-backend.vercel.app/classes/getClassroom", {
+                .post("https://cms-backend-7brm.vercel.app/classes/getClassroom", {
                   classCode: reminder.classCode,
                 })
                 .then((classDetails) => {

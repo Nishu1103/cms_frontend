@@ -30,7 +30,7 @@ const Discussion = ({classCode, adminEmail}) => {
     
     const getDiscussion = async () => {
         setLoading(true);
-        await axios.post("https://ocms-backend.vercel.app/classes/getDiscussions",{
+        await axios.post("https://cms-backend-7brm.vercel.app/classes/getDiscussions",{
             classCode: classCode
         },{ headers: { Authorization: 'Bearer ' + storeData.token } }
         ).then ((res) => {
@@ -61,7 +61,7 @@ const Discussion = ({classCode, adminEmail}) => {
             const uploadTask=uploadBytesResumable(storageRef, fileInput);
             uploadTask.on('state_changed', console.log, console.error, () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((firebaseURL) => {
-                    return axios.post('https://ocms-backend.vercel.app/classes/createDiscussion', {
+                    return axios.post('https://cms-backend-7brm.vercel.app/classes/createDiscussion', {
                         creatorEmail: userData.userEmail,
                         creatorName: userData.userName,
                         classCode: classCode,
@@ -91,7 +91,7 @@ const Discussion = ({classCode, adminEmail}) => {
                   })
               })
         } else {
-            axios.post('https://ocms-backend.vercel.app/classes/createDiscussion', {
+            axios.post('https://cms-backend-7brm.vercel.app/classes/createDiscussion', {
                 creatorEmail: userData.userEmail,
                 creatorName: userData.userName,
                 classCode: classCode,

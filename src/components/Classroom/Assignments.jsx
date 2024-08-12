@@ -20,7 +20,7 @@ const Assignments = ({classCode, adminEmail, isAssignmentCreated, setIsAssignmen
 
     const getAssignments = () => {
         setLoading(true);
-        axios.post("https://ocms-backend.vercel.app/classes/getAssignments", {
+        axios.post("https://cms-backend-7brm.vercel.app/classes/getAssignments", {
             classCode: classCode
         },{ headers: { Authorization: 'Bearer ' + storeData.token } }
         )

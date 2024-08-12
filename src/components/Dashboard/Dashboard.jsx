@@ -39,7 +39,7 @@ const Dashboard = () => {
         console.log(storeData);
         await axios
           .post(
-            "https://ocms-backend.vercel.app/classes/getClassrooms",
+            "https://cms-backend-7brm.vercel.app/classes/getClassrooms",
             {
               userEmail: storeData.userEmail,
               type: "owned",
@@ -53,7 +53,7 @@ const Dashboard = () => {
           .catch((err) => console.log(err));
         await axios
           .post(
-            "https://ocms-backend.vercel.app/classes/getClassrooms",
+            "https://cms-backend-7brm.vercel.app/classes/getClassrooms",
             {
               userEmail: storeData.userEmail,
               type: "enrolled",

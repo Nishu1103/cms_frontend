@@ -16,7 +16,7 @@ const Posts = ({fetchPosts, posts, loading, paginate, assignmentName, dueDate}) 
     };
     
     const setGrade = (submissionId, grade)=>{
-        axios.post("https://ocms-backend.vercel.app/classes/setGrade", {
+        axios.post("https://cms-backend-7brm.vercel.app/classes/setGrade", {
             submissionId: submissionId,
             grade: grade
         }, 

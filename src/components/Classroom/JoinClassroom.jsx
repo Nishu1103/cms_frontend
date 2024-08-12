@@ -75,7 +75,7 @@ const JoinClassroom = (props) => {
         }
         else{
             setLoading(true);
-            axios.post("https://ocms-backend.vercel.app/classes/joinClassroom", {
+            axios.post("https://cms-backend-7brm.vercel.app/classes/joinClassroom", {
                 userEmail: storeData.userEmail,
                 classCode: classCode
             },{ headers: { Authorization: 'Bearer ' + storeData.token } }

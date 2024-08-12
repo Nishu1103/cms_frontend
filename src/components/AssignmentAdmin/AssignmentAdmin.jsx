@@ -24,7 +24,7 @@ const AssignmentAdmin = () => {
 
     const fetchPosts = () =>{
         setPostLoading(true);
-        axios.post("https://ocms-backend.vercel.app/classes/getSubmissions", {
+        axios.post("https://cms-backend-7brm.vercel.app/classes/getSubmissions", {
             assignmentId: assignmentId
         }, 
         {
@@ -44,7 +44,7 @@ const AssignmentAdmin = () => {
 
     const getAssignment = () => {
         setAssgnLoading(true);
-        axios.post("https://ocms-backend.vercel.app/classes/getAssignment", {
+        axios.post("https://cms-backend-7brm.vercel.app/classes/getAssignment", {
             assignmentId: assignmentId
         }, 
         {

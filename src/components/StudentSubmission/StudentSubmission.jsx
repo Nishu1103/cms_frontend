@@ -35,7 +35,7 @@ const StudentSubmission = () => {
     setLoading(true);
     axios
       .post(
-        "https://ocms-backend.vercel.app/classes/getSubmission",
+        "https://cms-backend-7brm.vercel.app/classes/getSubmission",
         {
           assignmentId: assignmentId,
           userEmail: userData.userEmail,
@@ -61,7 +61,7 @@ const StudentSubmission = () => {
     setPageLoading(true);
     axios
       .post(
-        "https://ocms-backend.vercel.app/classes/getAssignment",
+        "https://cms-backend-7brm.vercel.app/classes/getAssignment",
         {
           assignmentId: assignmentId,
         },
@@ -86,7 +86,7 @@ const StudentSubmission = () => {
     setClassLoading(true);
     axios
       .post(
-        "https://ocms-backend.vercel.app/classes/getClassroom",
+        "https://cms-backend-7brm.vercel.app/classes/getClassroom",
         {
           classCode: classCode,
         },
@@ -130,7 +130,7 @@ const StudentSubmission = () => {
         .then((firebaseURL) => {
           // .then(firebaseURL => {
           return axios.post(
-            "https://ocms-backend.vercel.app/classes/submitAssignment",
+            "https://cms-backend-7brm.vercel.app/classes/submitAssignment",
             {
               assignmentId: assignmentId,
               studentName: userData.userName,
@@ -162,7 +162,7 @@ const StudentSubmission = () => {
     setLoading(true);
     axios
       .delete(
-        "https://ocms-backend.vercel.app/classes/deleteSubmission",
+        "https://cms-backend-7brm.vercel.app/classes/deleteSubmission",
         {
           data: {
             assignmentId: assignmentId,

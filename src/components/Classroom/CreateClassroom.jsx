@@ -77,7 +77,7 @@ const CreateClassroom = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        axios.post("https://ocms-backend.vercel.app/classes/createClassroom", {
+        axios.post("https://cms-backend-7brm.vercel.app/classes/createClassroom", {
             adminName: storeData.userName,
             adminEmail: storeData.userEmail,
             desc: values.description,
